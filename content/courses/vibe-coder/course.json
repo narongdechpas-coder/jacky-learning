@@ -1,0 +1,134 @@
+{
+  "slug": "vibe-coder",
+  "order": 4,
+  "icon": "💻",
+  "shortTitle": "Vibe Coder Training",
+  "title": "Vibe Coder Training",
+  "description": "คอร์สเรียนสร้างเว็บด้วย AI แบบ Vibe Coding — 6 Phase, 24 สัปดาห์",
+  "footer": "Vibe Coder Training — เรียนสร้างเว็บด้วย AI",
+  "phases": [
+    {
+      "id": 1,
+      "title": "รู้จักเครื่องมือ + คิดให้เป็น",
+      "icon": "🛠️",
+      "color": "#0071E3",
+      "bgColor": "rgba(0,113,227,0.07)",
+      "weeks": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "พื้นฐาน Web ที่ต้องรู้",
+      "icon": "🌐",
+      "color": "#34C759",
+      "bgColor": "rgba(52,199,89,0.08)",
+      "weeks": [
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "สร้าง App แบบ Interactive",
+      "icon": "⚛️",
+      "color": "#FF9500",
+      "bgColor": "rgba(255,149,0,0.08)",
+      "weeks": [
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "ข้อมูล + Backend + Security",
+      "icon": "🗄️",
+      "color": "#AF52DE",
+      "bgColor": "rgba(175,82,222,0.07)",
+      "weeks": [
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Connectors + Automation",
+      "icon": "🔗",
+      "color": "#FF2D55",
+      "bgColor": "rgba(255,45,85,0.07)",
+      "weeks": [
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "โปรเจกต์จริง + Deploy + Portfolio",
+      "icon": "🚀",
+      "color": "#00A3BF",
+      "bgColor": "rgba(0,163,191,0.08)",
+      "weeks": [
+        {
+          "id": 19
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        }
+      ]
+    }
+  ]
+}

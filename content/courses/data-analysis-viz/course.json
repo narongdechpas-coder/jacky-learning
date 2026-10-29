@@ -1,0 +1,83 @@
+{
+  "slug": "data-analysis-viz",
+  "order": 2,
+  "icon": "📊",
+  "shortTitle": "Data Analysis & Viz",
+  "title": "Data Analysis & Visualization",
+  "description": "คอร์สวิเคราะห์ข้อมูลและสร้าง Data Visualization สำหรับมือใหม่ — 4 Phase · 9 สัปดาห์ + Workshop Sprint",
+  "footer": "Data Analysis & Visualization — คอร์สวิเคราะห์ข้อมูลสำหรับมือใหม่",
+  "phases": [
+    {
+      "id": 1,
+      "title": "พื้นฐานข้อมูลและเครื่องมือ",
+      "icon": "📊",
+      "color": "#0071E3",
+      "bgColor": "rgba(0,113,227,0.07)",
+      "weeks": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "วิเคราะห์ข้อมูล & เลือก Insight",
+      "icon": "🔍",
+      "color": "#34C759",
+      "bgColor": "rgba(52,199,89,0.08)",
+      "weeks": [
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Visualization & นำเสนอ",
+      "icon": "📈",
+      "color": "#FF9500",
+      "bgColor": "rgba(255,149,0,0.08)",
+      "weeks": [
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Workshop Sprint: ลงมือทำเต็มรูปแบบ 3 ชุด",
+      "icon": "🛠️",
+      "color": "#AF52DE",
+      "bgColor": "rgba(175,82,222,0.07)",
+      "weeks": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        }
+      ]
+    }
+  ]
+}
