@@ -27,10 +27,14 @@ function NavLink({ w, slug, dir }) {
   if (!w) return <div />;
   return (
     <Link href={`/courses/${slug}/phase/${w.phaseId}/week/${w.id}/`} className="doc-nav-link" style={dir === 'next' ? { textAlign: 'right' } : undefined}>
-      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--c-navy-60)', marginBottom: 4 }}>{dir === 'next' ? 'ถัดไป →' : '← ก่อนหน้า'}</p>
-      <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--c-deep-navy)' }}>{weekLabel(w)}: {w.title}</p>
+      <span className="doc-nav-link__dir">{dir === 'next' ? 'ถัดไป →' : '← ก่อนหน้า'}</span>
+      <span className="doc-nav-link__title">{weekLabel(w)}: {w.title}</span>
     </Link>
   );
+}
+
+function Clock() {
+  return <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M12 7v5l3 2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>;
 }
 
 export default async function WeekPage({ params }) {
@@ -48,34 +52,36 @@ export default async function WeekPage({ params }) {
       <Sidebar course={course} />
       <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
         <main className="week-main" style={{ width: '100%', flex: 1 }}>
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap', marginBottom: '1.5rem', fontFamily: 'var(--font-mono)', fontSize: 12 }}>
-            <Link href={`/courses/${slug}/`} style={{ color: 'var(--c-navy-60)' }}>{course.shortTitle}</Link>
-            <span style={{ color: 'var(--c-navy-60)' }}>›</span>
-            <Link href={`/courses/${slug}/phase/${p.id}/`} style={{ color: 'var(--c-navy-60)' }}>Phase {p.id}</Link>
-            <span style={{ color: 'var(--c-navy-60)' }}>›</span>
+          <nav className="lesson-crumb" aria-label="ตำแหน่งบทเรียน">
+            <Link href={`/courses/${slug}/`}>{course.shortTitle}</Link>
+            <span>›</span>
+            <Link href={`/courses/${slug}/phase/${p.id}/`}>Phase {p.id}</Link>
+            <span>›</span>
             <span style={{ color: 'var(--c-deep-navy)' }}>{weekLabel(w)}</span>
           </nav>
-          <header style={{ marginBottom: '2rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--c-navy-12)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 20, background: p.bgColor, color: p.color, border: `1px solid ${p.color}25` }}>
-                {p.icon} Phase {p.id} · {weekLabel(w)}
-              </span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--c-navy-60)' }}>⏱️ {fmtHours(w.hours)} ชม.</span>
+          <header className="lesson-head">
+            <div className="lesson-head__tags">
+              <span className="tag" style={{ background: p.bgColor, color: p.color }}>{p.icon} Phase {p.id} · {weekLabel(w)}</span>
+              <span className="lesson-head__hours"><Clock /> {fmtHours(w.hours)} ชม.</span>
             </div>
-            <h1 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.875rem)', fontWeight: 700, lineHeight: 1.25, color: 'var(--c-deep-navy)', letterSpacing: '-0.02em' }}>{w.title}</h1>
+            <h1 className="lesson-head__title">{w.title}</h1>
+            <div className="lesson-progress">
+              <span>บทที่ {idx + 1} จาก {flat.length}</span>
+              <span className="lesson-progress__bar"><span style={{ width: `${Math.round(((idx + 1) / flat.length) * 100)}%` }} /></span>
+            </div>
           </header>
 
           {w.downloads?.length > 0 && (
             <div style={{ marginBottom: '2rem' }}>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--c-navy-60)', marginBottom: '0.625rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>ไฟล์ข้อมูลสำหรับ Workshop</p>
+              <p className="section-label">ไฟล์ข้อมูลสำหรับ Workshop</p>
               {w.downloads.map((d) => (
                 <a key={d.file} href={withBase(`/courses/${slug}/downloads/${d.file}`)} download={d.file} className="download-card">
-                  <span style={{ width: 40, height: 40, borderRadius: 10, background: 'rgba(47,107,255,0.1)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>📊</span>
+                  <span className="download-card__icon">📊</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <p style={{ fontWeight: 600, color: 'var(--c-deep-navy)', fontSize: '0.9rem', marginBottom: 2 }}>{d.file}</p>
-                    <p style={{ fontSize: '0.8rem', color: 'var(--c-navy-60)' }}>{d.label} · {d.file.split('.').pop().toUpperCase()}</p>
+                    <p className="download-card__name">{d.file}</p>
+                    <p className="download-card__desc">{d.label} · {d.file.split('.').pop().toUpperCase()}</p>
                   </div>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 20, background: 'var(--c-electric-blue)', color: '#fff', fontSize: '0.8rem', fontWeight: 600, flexShrink: 0, whiteSpace: 'nowrap' }}>⬇ Download</span>
+                  <span className="btn-primary download-card__btn">⬇ Download</span>
                 </a>
               ))}
             </div>
