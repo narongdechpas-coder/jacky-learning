@@ -57,7 +57,17 @@ downloads:               # กล่องดาวน์โหลดไฟล�
 
 **เพิ่มคอร์สใหม่** — คัดลอกโฟลเดอร์คอร์สเดิมเป็นต้นแบบ เปลี่ยน `slug`, `order`, `icon` ใน `course.json`
 
-**เพิ่ม E-Book** — วางรูป Banner ขนาด 1600 × 500 px (16:5) ที่ `public/ebooks/` แล้วเพิ่มใน `content/ebooks.json`
+**ใส่ภาพประกอบ 3D** — วางไฟล์ `.webp` (หรือ `.png`) ชื่อตามตารางนี้ที่ `public/illustrations/` แล้ว build ใหม่ ถ้ายังไม่มีไฟล์ หน้าเว็บจะใช้ภาพสำรอง (ลูกบาศก์ SVG หรือไอคอน) แทนให้เอง
+
+| ไฟล์ | ใช้ที่ |
+|---|---|
+| `hero-learner` | ภาพใหญ่ด้านขวาของหน้าแรก (3:2) |
+| `hub-courses` | การ์ด "คอร์สออนไลน์" หน้าแรก (1:1) |
+| `hub-ebooks` | การ์ด "E-Book" หน้าแรก (1:1) |
+| `course-<slug>` | การ์ดคอร์สในหน้ารวมคอร์ส (1:1) เช่น `course-vibe-coder` |
+| `not-found` | หน้า 404 (1:1) |
+
+**เพิ่ม E-Book** — วางรูปปกแนวตั้งสัดส่วน A5 (เช่น 600 × 848 px, webp) ที่ `public/ebooks/` แล้วเพิ่มใน `content/ebooks.json`
 
 ```json
 [
@@ -65,14 +75,14 @@ downloads:               # กล่องดาวน์โหลดไฟล�
     "slug": "my-book",
     "title": "ชื่อหนังสือ",
     "description": "คำอธิบายสั้นๆ",
-    "banner": "/ebooks/my-book.webp",
+    "cover": "/ebooks/my-book.webp",
     "status": "available",
     "link": "https://ลิงก์ไปหน้าขายหรืออ่าน"
   }
 ]
 ```
 
-`status`: `available` (อ่านได้แล้ว) / `writing` (กำลังเขียน) / `soon` (เร็วๆ นี้) — ไม่มี `link` การ์ดจะกดไม่ได้
+`status`: `available` (อ่านได้แล้ว) / `writing` (กำลังเขียน) / `soon` (เร็วๆ นี้) — ไม่มี `link` การ์ดจะกดไม่ได้ ไม่มี `cover` จะใช้ปกสำรอง "Coming Soon" ตัวเลข E-Book บนหน้าแรกนับเฉพาะเล่มที่ไม่ใช่ `soon`
 
 ## รันและ Deploy
 

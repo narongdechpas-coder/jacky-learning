@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "slug": "vibe-code-systematic",
+    "title": "Self-Study: Vibe Code อย่างมีระบบ",
+    "description": "คู่มืออ่านเองทีละบท สร้างเว็บและเครื่องมือด้วย AI เป็นขั้นตอน ตั้งแต่ไอเดีย วางแผน เขียนโค้ด ตรวจงาน จนถึง Deploy",
+    "cover": "/ebooks/vibe-code-systematic.webp",
+    "status": "writing"
+  },
+  {
+    "slug": "coming-soon-2",
+    "title": "เล่มที่ 2",
+    "description": "กำลังวางโครงเล่ม ติดตามได้เร็วๆ นี้",
+    "status": "soon"
+  },
+  {
+    "slug": "coming-soon-3",
+    "title": "เล่มที่ 3",
+    "description": "กำลังวางโครงเล่ม ติดตามได้เร็วๆ นี้",
+    "status": "soon"
+  },
+  {
+    "slug": "coming-soon-4",
+    "title": "เล่มที่ 4",
+    "description": "กำลังวางโครงเล่ม ติดตามได้เร็วๆ นี้",
+    "status": "soon"
+  }
+]
