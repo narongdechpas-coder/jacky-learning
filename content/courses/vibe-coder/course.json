@@ -11,8 +11,8 @@
       "id": 1,
       "title": "รู้จักเครื่องมือ + คิดให้เป็น",
       "icon": "🛠️",
-      "color": "#0071E3",
-      "bgColor": "rgba(0,113,227,0.07)",
+      "color": "#2563EB",
+      "bgColor": "rgba(37,99,235,0.08)",
       "weeks": [
         {
           "id": 1
@@ -29,8 +29,8 @@
       "id": 2,
       "title": "พื้นฐาน Web ที่ต้องรู้",
       "icon": "🌐",
-      "color": "#34C759",
-      "bgColor": "rgba(52,199,89,0.08)",
+      "color": "#4F46E5",
+      "bgColor": "rgba(79,70,229,0.08)",
       "weeks": [
         {
           "id": 4
@@ -47,8 +47,8 @@
       "id": 3,
       "title": "สร้าง App แบบ Interactive",
       "icon": "⚛️",
-      "color": "#FF9500",
-      "bgColor": "rgba(255,149,0,0.08)",
+      "color": "#0369A1",
+      "bgColor": "rgba(3,105,161,0.08)",
       "weeks": [
         {
           "id": 7
@@ -68,8 +68,8 @@
       "id": 4,
       "title": "ข้อมูล + Backend + Security",
       "icon": "🗄️",
-      "color": "#AF52DE",
-      "bgColor": "rgba(175,82,222,0.07)",
+      "color": "#047857",
+      "bgColor": "rgba(4,120,87,0.08)",
       "weeks": [
         {
           "id": 11
@@ -89,8 +89,8 @@
       "id": 5,
       "title": "Connectors + Automation",
       "icon": "🔗",
-      "color": "#FF2D55",
-      "bgColor": "rgba(255,45,85,0.07)",
+      "color": "#7C3AED",
+      "bgColor": "rgba(124,58,237,0.08)",
       "weeks": [
         {
           "id": 15
@@ -110,8 +110,8 @@
       "id": 6,
       "title": "โปรเจกต์จริง + Deploy + Portfolio",
       "icon": "🚀",
-      "color": "#00A3BF",
-      "bgColor": "rgba(0,163,191,0.08)",
+      "color": "#0F766E",
+      "bgColor": "rgba(15,118,110,0.08)",
       "weeks": [
         {
           "id": 19

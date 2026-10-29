@@ -70,7 +70,7 @@ export default async function WeekPage({ params }) {
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--c-navy-60)', marginBottom: '0.625rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>ไฟล์ข้อมูลสำหรับ Workshop</p>
               {w.downloads.map((d) => (
                 <a key={d.file} href={withBase(`/courses/${slug}/downloads/${d.file}`)} download={d.file} className="download-card">
-                  <span style={{ width: 40, height: 40, borderRadius: 10, background: 'rgba(30,144,255,0.1)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>📊</span>
+                  <span style={{ width: 40, height: 40, borderRadius: 10, background: 'rgba(47,107,255,0.1)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>📊</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <p style={{ fontWeight: 600, color: 'var(--c-deep-navy)', fontSize: '0.9rem', marginBottom: 2 }}>{d.file}</p>
                     <p style={{ fontSize: '0.8rem', color: 'var(--c-navy-60)' }}>{d.label} · {d.file.split('.').pop().toUpperCase()}</p>
