@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { withBase } from '@/lib/basePath';
 
 // กล่องโค้ดแบบหน้าต่าง Terminal + ปุ่ม Copy
 function CodeWindow({ children }) {
@@ -88,7 +89,7 @@ const components = {
   ol: ({ children, start }) => <ol start={start} style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', marginBottom: '0.875rem', color: 'var(--c-navy-60)', display: 'flex', flexDirection: 'column', gap: 4 }}>{children}</ol>,
   li: ({ children }) => <li style={{ lineHeight: 1.7 }}>{children}</li>,
   a: ({ href, children }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--c-electric-blue)', textDecoration: 'underline', fontWeight: 500 }}>
+    <a href={withBase(href)} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--c-electric-blue)', textDecoration: 'underline', fontWeight: 500 }}>
       {isYoutube(href) && '🎬 '}{children}
     </a>
   ),
@@ -102,7 +103,7 @@ const components = {
       );
     }
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={s} alt={alt ?? ''} loading="lazy" style={{ borderRadius: 8, maxWidth: '100%', margin: '0.75rem 0' }} />;
+    return <img src={withBase(s)} alt={alt ?? ''} loading="lazy" style={{ borderRadius: 8, maxWidth: '100%', margin: '0.75rem 0' }} />;
   },
   hr: () => <hr style={{ margin: '2rem 0', border: 'none', borderTop: '1px solid var(--c-navy-12)' }} />,
   strong: ({ children }) => <strong style={{ fontWeight: 600, color: 'var(--c-deep-navy)' }}>{children}</strong>,

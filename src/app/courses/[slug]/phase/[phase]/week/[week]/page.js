@@ -6,6 +6,7 @@ import SiteFooter from '@/components/SiteFooter';
 import Markdown from '@/components/Markdown';
 import ChartTypesDemo from '@/components/ChartTypesDemo';
 import { getAllCourses, getCourse, getPhase, getWeek, getFlatWeeks, weekLabel, fmtHours } from '@/lib/content';
+import { withBase } from '@/lib/basePath';
 
 // คอมโพเนนต์ Interactive ที่เรียกใช้ได้จาก frontmatter: interactive: "<ชื่อ>"
 const INTERACTIVE = { 'chart-types-demo': ChartTypesDemo };
@@ -68,7 +69,7 @@ export default async function WeekPage({ params }) {
             <div style={{ marginBottom: '2rem' }}>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--c-navy-60)', marginBottom: '0.625rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>ไฟล์ข้อมูลสำหรับ Workshop</p>
               {w.downloads.map((d) => (
-                <a key={d.file} href={`/courses/${slug}/downloads/${d.file}`} download={d.file} className="download-card">
+                <a key={d.file} href={withBase(`/courses/${slug}/downloads/${d.file}`)} download={d.file} className="download-card">
                   <span style={{ width: 40, height: 40, borderRadius: 10, background: 'rgba(30,144,255,0.1)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>📊</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <p style={{ fontWeight: 600, color: 'var(--c-deep-navy)', fontSize: '0.9rem', marginBottom: 2 }}>{d.file}</p>
