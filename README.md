@@ -64,6 +64,8 @@ downloads:               # กล่องดาวน์โหลดไฟล�
 | `hero-learner` | ภาพใหญ่ด้านขวาของหน้าแรก (3:2) |
 | `hub-courses` | การ์ด "คอร์สออนไลน์" หน้าแรก (1:1) |
 | `hub-ebooks` | การ์ด "E-Book" หน้าแรก (1:1) |
+| `course-<slug>` | การ์ดคอร์สในหน้ารวมคอร์ส (1:1) เช่น `course-vibe-coder` |
+| `not-found` | หน้า 404 (1:1) |
 
 **เพิ่ม E-Book** — วางรูป Banner ขนาด 1600 × 500 px (16:5) ที่ `public/ebooks/` แล้วเพิ่มใน `content/ebooks.json`
 
