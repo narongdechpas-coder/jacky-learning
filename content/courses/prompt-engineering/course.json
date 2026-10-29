@@ -1,0 +1,41 @@
+{
+  "slug": "prompt-engineering",
+  "order": 1,
+  "icon": "💬",
+  "shortTitle": "Prompt Engineering",
+  "title": "Prompt Engineering",
+  "description": "เรียนรู้การใช้ AI ในงานออฟฟิศได้จริงตั้งแต่วันแรก — 2 Phase · 4 สัปดาห์ · เครื่องมือ: ChatGPT",
+  "footer": "Prompt Engineering คอร์ส — เรียนรู้การใช้ AI ในงานออฟฟิศ",
+  "phases": [
+    {
+      "id": 1,
+      "title": "รู้จัก AI & เขียน Prompt ขั้นพื้นฐาน",
+      "icon": "🧠",
+      "color": "#0071E3",
+      "bgColor": "rgba(0,113,227,0.07)",
+      "weeks": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "ประยุกต์ใช้งานจริง & สร้าง Template",
+      "icon": "⚡",
+      "color": "#34C759",
+      "bgColor": "rgba(52,199,89,0.08)",
+      "weeks": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ]
+    }
+  ]
+}
