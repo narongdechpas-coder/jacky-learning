@@ -15,7 +15,8 @@ function CardArt({ src, icon, tint }) {
 
 export default function HomePage() {
   const courses = getAllCourses();
-  const ebooks = getEbooks();
+  // นับเฉพาะเล่มที่มีอยู่จริง (ไม่นับการ์ด "เร็วๆ นี้")
+  const ebooks = getEbooks().filter((b) => b.status !== 'soon');
   const weeks = courses.reduce((s, c) => s + c.stats.weeks + c.stats.workshops, 0);
   const hours = courses.reduce((s, c) => s + c.stats.hours, 0);
   const hero = illustration('hero-learner');

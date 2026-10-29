@@ -232,16 +232,19 @@ img.course-card__art { -webkit-mask-image: radial-gradient(closest-side, #000 80
 .search__title { display: block; font-size: 0.9rem; font-weight: 500; color: var(--c-deep-navy); line-height: 1.45; }
 .search__empty { padding: 0.75rem; font-size: 0.9rem; color: var(--c-navy-60); }
 
-/* ---------- E-Book banners ---------- */
-.ebook-list { display: flex; flex-direction: column; gap: 1.25rem; }
-.ebook-card { display: block; background: var(--color-surface); border: 1px solid var(--c-navy-12); border-radius: var(--radius-card); box-shadow: var(--shadow-card); overflow: hidden; transition: transform .2s, box-shadow .2s; }
+/* ---------- E-Book (ปกแนวตั้ง) ---------- */
+.ebook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.ebook-card { display: flex; flex-direction: column; background: var(--color-surface); border: 1px solid var(--c-navy-12); border-radius: var(--radius-card); box-shadow: var(--shadow-card); overflow: hidden; transition: transform .2s, box-shadow .2s; }
 a.ebook-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
-.ebook-banner { aspect-ratio: 16 / 5; width: 100%; object-fit: cover; background: var(--c-navy-04); }
-.ebook-banner--empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border-bottom: 1px dashed var(--c-navy-12); color: var(--c-navy-60); font-family: var(--font-mono); font-size: 12px; text-align: center; padding: 1rem; background: repeating-linear-gradient(135deg, #fff, #fff 12px, var(--c-navy-04) 12px, var(--c-navy-04) 24px); }
-.ebook-body { padding: 1rem 1.25rem 1.25rem; }
-.ebook-status { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-bottom: 0.5rem; }
-.ebook-title { font-size: 1.125rem; font-weight: 600; color: var(--c-deep-navy); line-height: 1.35; }
-.ebook-desc { font-size: 0.9rem; color: var(--c-navy-60); line-height: 1.7; margin-top: 0.25rem; }
+.ebook-cover { display: block; width: 100%; aspect-ratio: 1 / 1.414; object-fit: cover; border-bottom: 1px solid var(--c-navy-12); }
+.ebook-cover--empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; background: radial-gradient(circle at 30% 20%, #ffffffcc, transparent 45%), linear-gradient(160deg, var(--c-soft-blue), #dfe3ff 60%, var(--c-sky)); }
+.ebook-cover__mark { font-size: 44px; filter: drop-shadow(0 8px 16px #2f6bff40); }
+.ebook-cover__soon { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-primary); background: #ffffffb3; padding: 4px 12px; border-radius: var(--radius-pill); }
+.ebook-body { padding: 1rem 1.125rem 1.25rem; }
+.ebook-status { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: var(--radius-pill); margin-bottom: 0.5rem; }
+.ebook-title { font-size: 1.05rem; font-weight: 700; color: var(--c-deep-navy); line-height: 1.35; }
+.ebook-desc { font-size: 0.875rem; color: var(--c-navy-60); line-height: 1.65; margin-top: 0.25rem; }
+@media (max-width: 520px) { .ebook-grid { grid-template-columns: repeat(2, 1fr); gap: 0.875rem; } .ebook-body { padding: 0.75rem 0.875rem 1rem; } }
 
 /* ---------- Docs layout (หน้าบทเรียน) ---------- */
 .docs-layout { display: flex; min-height: 100vh; }
