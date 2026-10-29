@@ -182,6 +182,22 @@ img.hub-card__art, .home-hero__art img { -webkit-mask-image: radial-gradient(clo
   .home-hero__title { font-size: 2.5rem; margin-bottom: 0.5rem; }
   .page-shell:has(.home-main) .site-footer { padding: 0.625rem 1.5rem; }
 }
+@media (orientation: portrait) and (min-width: 761px) {
+  /* จอแนวตั้งที่กว้าง (แท็บเล็ต, มือถือจอใหญ่, โหมด Desktop site): เรียงบนลงล่าง ไม่จัดกลางจอ */
+  .home-main { justify-content: flex-start; gap: 2.5rem; padding-top: 3rem; padding-bottom: 3.5rem; }
+  .home-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 1.5rem; }
+  .home-hero__art { order: -1; width: 100%; }
+  .home-hero__art img, .home-hero__art svg { max-height: min(720px, 38vh); }
+  .home-hero__title { font-size: clamp(2.5rem, 6vw, 4rem); }
+  .home-hero .lead { margin-left: auto; margin-right: auto; font-size: 1.125rem; max-width: 640px; }
+  .home-hero__actions, .home-stats { justify-content: center; }
+  .home-stats { gap: 0.5rem 2.75rem; }
+  .home-stats dd { font-size: 1.75rem; }
+  /* การ์ด 2 ใบเคียงกัน ภาพอยู่บน ข้อความอยู่ล่าง */
+  .home-main .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-main .hub-card { flex-direction: column; align-items: flex-start; padding: 1.5rem 1.5rem 3.5rem; }
+  .home-main .hub-card__art { order: -1; width: 150px; height: 150px; align-self: center; }
+}
 @media (max-width: 760px) {
   /* แท็บเล็ตแนวตั้ง/มือถือ: เรียงลงล่าง ปล่อยให้เลื่อนได้ตามปกติ */
   .home-main { justify-content: flex-start; gap: 1.5rem; }
