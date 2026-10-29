@@ -3,6 +3,7 @@ import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import Crumbs from '@/components/Crumbs';
 import { getEbooks } from '@/lib/content';
+import { withBase } from '@/lib/basePath';
 
 export const metadata = { title: 'E-Book' };
 
@@ -15,7 +16,7 @@ const STATUS = {
 function Banner({ book }) {
   if (book?.banner) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img className="ebook-banner" src={book.banner} alt={book.title} />;
+    return <img className="ebook-banner" src={withBase(book.banner)} alt={book.title} />;
   }
   return (
     <div className="ebook-banner ebook-banner--empty">

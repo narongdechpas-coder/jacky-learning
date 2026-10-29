@@ -84,6 +84,16 @@ npm run build    # สร้างเว็บไว้ที่ out/
 
 Netlify: push ขึ้น GitHub แล้วเชื่อม repo ได้เลย ค่า build ตั้งไว้ใน `netlify.toml` แล้ว (`npm run build`, publish `out`)
 
+GitHub Pages: push เข้า `main` แล้ว `.github/workflows/pages.yml` จะ build และ deploy ให้เอง เว็บอยู่ที่ `https://narongdechpas-coder.github.io/jacky-learning/` (ต้องตั้ง Settings → Pages → Source เป็น GitHub Actions ไว้ครั้งเดียว)
+
+เว็บบน GitHub Pages อยู่ใต้ `/jacky-learning/` ไม่ได้อยู่ที่ราก ตอน build จึงตั้ง `BASE_PATH=/jacky-learning` ถ้าจะทดสอบแบบเดียวกันในเครื่อง:
+
+```bash
+BASE_PATH=/jacky-learning npm run build
+```
+
+ในโค้ด `<Link>` ต่อ path ให้เอง ส่วน `<img>` หรือ `<a>` ธรรมดาที่ชี้ไฟล์ใน `public/` ต้องครอบด้วย `withBase()` จาก `src/lib/basePath.js` ส่วนรูปในไฟล์ Markdown เขียน `/courses/...` ตามเดิมได้ เพราะตัวแสดง Markdown ต่อให้แล้ว
+
 ## ข้อตกลงด้านการแสดงผล (ให้ทุกคอร์สเหมือนกัน)
 
 - สีประจำ Phase ไล่ตามลำดับ: ฟ้า `#0071E3` → เขียว `#34C759` → ส้ม `#FF9500` → ม่วง `#AF52DE` → ชมพู `#FF2D55` → ฟ้าอมเขียว `#00A3BF`
