@@ -11,8 +11,8 @@
       "id": 1,
       "title": "พื้นฐานข้อมูลและเครื่องมือ",
       "icon": "📊",
-      "color": "#0071E3",
-      "bgColor": "rgba(0,113,227,0.07)",
+      "color": "#2563EB",
+      "bgColor": "rgba(37,99,235,0.08)",
       "weeks": [
         {
           "id": 1
@@ -29,8 +29,8 @@
       "id": 2,
       "title": "วิเคราะห์ข้อมูล & เลือก Insight",
       "icon": "🔍",
-      "color": "#34C759",
-      "bgColor": "rgba(52,199,89,0.08)",
+      "color": "#4F46E5",
+      "bgColor": "rgba(79,70,229,0.08)",
       "weeks": [
         {
           "id": 4
@@ -47,8 +47,8 @@
       "id": 3,
       "title": "Visualization & นำเสนอ",
       "icon": "📈",
-      "color": "#FF9500",
-      "bgColor": "rgba(255,149,0,0.08)",
+      "color": "#0369A1",
+      "bgColor": "rgba(3,105,161,0.08)",
       "weeks": [
         {
           "id": 7
@@ -65,8 +65,8 @@
       "id": 4,
       "title": "Workshop Sprint: ลงมือทำเต็มรูปแบบ 3 ชุด",
       "icon": "🛠️",
-      "color": "#AF52DE",
-      "bgColor": "rgba(175,82,222,0.07)",
+      "color": "#047857",
+      "bgColor": "rgba(4,120,87,0.08)",
       "weeks": [
         {
           "id": 1

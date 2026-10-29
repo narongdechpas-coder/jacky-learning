@@ -13,7 +13,7 @@ export default function HomePage() {
 
   return (
     <div className="page-shell">
-      <SiteHeader />
+      <SiteHeader active="home" />
       {/* หน้าแรกจัดให้จบในจอเดียว (จอคอม/โน้ตบุ๊ก) ไม่ต้องเลื่อนลง */}
       <main className="page-main home-main">
         <div className="home-hero">
@@ -30,9 +30,9 @@ export default function HomePage() {
         </div>
 
         <div className="hub-grid">
-          <Link href="/courses/" className="hub-card" style={{ borderTop: '3px solid #0071E3' }}>
+          <Link href="/courses/" className="hub-card" style={{ borderTop: '3px solid #2F6BFF' }}>
             <div className="hub-card__head">
-              <span className="hub-card__icon" style={{ background: 'rgba(0,113,227,0.07)' }}>🎓</span>
+              <span className="hub-card__icon" style={{ background: 'rgba(47,107,255,0.08)' }}>🎓</span>
               <div>
                 <p className="hub-card__eyebrow">01 · ONLINE TRAINING COURSE</p>
                 <h2 className="hub-card__title">คอร์สออนไลน์</h2>
@@ -41,14 +41,14 @@ export default function HomePage() {
             <p className="hub-card__desc">เรียนเป็น Phase และสัปดาห์ มี Workshop, Prompt สำเร็จรูป และเกณฑ์ผ่านทุกสัปดาห์</p>
             <div className="hub-card__meta">
               {courses.map((c) => (
-                <span key={c.slug} className="tag" style={{ background: 'rgba(0,113,227,0.07)', color: '#0071E3' }}>{c.icon} {c.shortTitle}</span>
+                <span key={c.slug} className="tag" style={{ background: 'rgba(47,107,255,0.08)', color: '#2F6BFF' }}>{c.icon} {c.shortTitle}</span>
               ))}
             </div>
             <p className="hub-card__cta">ดูคอร์สทั้งหมด →</p>
           </Link>
-          <Link href="/ebooks/" className="hub-card" style={{ borderTop: '3px solid #AF52DE' }}>
+          <Link href="/ebooks/" className="hub-card" style={{ borderTop: '3px solid #4F46E5' }}>
             <div className="hub-card__head">
-              <span className="hub-card__icon" style={{ background: 'rgba(175,82,222,0.07)' }}>📚</span>
+              <span className="hub-card__icon" style={{ background: 'rgba(79,70,229,0.08)' }}>📚</span>
               <div>
                 <p className="hub-card__eyebrow">02 · E-BOOK</p>
                 <h2 className="hub-card__title">E-Book</h2>
@@ -56,7 +56,7 @@ export default function HomePage() {
             </div>
             <p className="hub-card__desc">หนังสืออ่านเองแบบ Self-Study เล่าเป็นเรื่องต่อเนื่อง พร้อมตัวอย่างและ Prompt ให้ลองทำตาม</p>
             <div className="hub-card__meta">
-              <span className="tag" style={{ background: 'rgba(175,82,222,0.07)', color: '#AF52DE' }}>
+              <span className="tag" style={{ background: 'rgba(79,70,229,0.08)', color: '#4F46E5' }}>
                 {ebooks.length ? `${ebooks.length} เล่ม` : 'เร็วๆ นี้'}
               </span>
             </div>
